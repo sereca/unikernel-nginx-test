@@ -1,4 +1,4 @@
-FROM marklee77/frankenlibc
+FROM sereca/unikernel-app-builder
 MAINTAINER Mark Stillwell <mark@stillwell.me>
 
 RUN apt-get update && \
@@ -34,5 +34,4 @@ COPY disk.img /usr/local/share/disk.img
 
 EXPOSE 8080
 
-#CMD rexec nginx -nx -ro fs.img -rw docker:eth0 -- -c /data/conf/nginx.conf
-CMD rexec nginx /usr/local/share/disk.img docker:eth0 -- -c /data/conf/nginx.conf
+CMD rexec nginx -rw /usr/local/share/disk.img docker:eth0 -- -c /data/conf/nginx.conf

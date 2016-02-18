@@ -1,3 +1,3 @@
-# lkl-musl-nginx-test
+# unikernel-nginx-test
 
-Test of building and running nginx under lkl-musl.
+Test of building and running nginx under unikernel.
