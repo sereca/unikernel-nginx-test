@@ -8,7 +8,7 @@ RUN apt-get update && \
 RUN cd /usr/src && \
     curl http://nginx.org/download/nginx-1.9.2.tar.gz | tar xzf - && \
     cd nginx-1.9.2 && \
-    FRANKEN_VERBOSE=0 CC=/usr/local/bin/franken-cc ./configure \
+    UNIKERNEL_VERBOSE=0 CC=/usr/local/bin/unikernel-cc ./configure \
         --conf-path=/data/conf/nginx.conf \
         --sbin-path=/none \
         --pid-path=/tmp/nginx.pid \
